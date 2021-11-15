@@ -6,11 +6,6 @@ app = Flask(__name__)
 api = Api(app)
 
 
-# @app.route('/concatenation/<string:name>/<int:age>')
-# def concat_variables(name: str, age: int):
-#     return jsonify(name + str(age))
-
-
 @app.route('/concatenation')
 def with_parameters():
     message_string = request.args.get('message_string')
